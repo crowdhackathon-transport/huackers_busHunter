@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://83.212.116.159/trans';
+$config['base_url'] = 'xxxxxxxx/xxxxxx/';
 
 /*
 |--------------------------------------------------------------------------
