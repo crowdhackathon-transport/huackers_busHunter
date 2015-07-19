@@ -1,0 +1,84 @@
+
+<ion-view title="{{ 'choose_route' | translate }}">
+
+    <ion-tabs class="tabs-striped tabs-top tabs-positive">
+        <ion-tab title="{{'near_lines'|translate}}" on-select=showNearLines()>
+            <ion-nav-view name="all-tab">
+                <ion-content>
+                    <!--<ion-list>-->
+                        <!--<ion-item ng-repeat="line in lines" >-->
+                            <!--<a href="#app/checkin/{{line.line_id}}/{{line.dir}}"> {{line.line_id}} - {{line.name}}  </a>-->
+                            <!--<i class="icon ion-android-favorite-outline"></i>-->
+                        <!--</ion-item>-->
+                    <!--</ion-list>-->
+
+                    <div class="list " >
+                        <div class="item" >
+                            <a href="#app/route/{{line.line_id}}/{{line.dir}}" class="item item-icon-right " ng-repeat="line in lines" >
+                                {{line.line_id}} - {{line.name}}
+                                <div class="right-side" ng-click="addToFavorites({{line.line_id}},{{line.dir}});">
+                                        <i ng-if="!fave" class="icon ion-android-favorite-outline"></i>
+                                        <i ng-if="fave" class="icon ion-android-favorite"></i>
+
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+        <ion-tab title="{{'favorites'|translate}}" on-select=showFavLines()>
+            <ion-nav-view name="all-tab">
+                <ion-content>
+                    <ion-list>
+                        <ion-item ng-repeat="line in lines" >
+                            <a href="#app/route/{{line.line_id}}/{{line.dir}}"> {{line.line_id}} - {{line.name}}  </a>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+        <ion-tab title="{{'all_lines'|translate}}" on-select=showAllLines()>
+            <ion-nav-view name="all-tab">
+                <ion-content>
+                    <!--<div class="list list-inset">
+                        <label class="item item-input">
+                            <i class="icon ion-search placeholder-icon"></i>
+                            <input type="text" placeholder="Search">
+                        </label>
+                    </div>
+                    <ion-list>
+                        <ion-item ng-repeat="line in lines" >
+                            <a href="#app/route/{{line.line_id}}/{{line.dir}}"> {{line.line_id}} - {{line.name}}  </a>
+                        </ion-item>
+                    </ion-list>-->
+
+                    <div class="list">
+                        <div class="bar bar-header item-input-inset">
+                            <ion-search placeholder="Search line" filter="search">
+
+                            </ion-search>
+                        </div>
+                        <div ng-repeat="line in lines | filter:search.value" class="item">
+                            <a href="#app/route/{{line.line_id}}/{{line.dir}}"> {{line.line_id}} - {{line.name}}  </a>
+                        </div>
+                    </div>
+
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
+
+
+
+
+    <!--<ion-content >-->
+        <!--<ion-list>-->
+            <!--<ion-item ng-repeat="line in lines" >-->
+                  <!--<a href="#app/checkin/{{line.line_id}}/{{line.dir}}"> {{line.line_id}} - {{line.name}}  </a>-->
+            <!--</ion-item>-->
+            <!--</ion-list>-->
+    <!--</ion-content>-->
+</ion-view>

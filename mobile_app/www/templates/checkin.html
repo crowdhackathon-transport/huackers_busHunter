@@ -1,0 +1,24 @@
+<ion-view view-title="Check in">
+    <ion-content>
+        <div class="row item item-divider bar bar-header bar-energized">
+            <div class="col col-20 profile"><img src="../../www/img/ionic.png"/></div>
+            <div class="col"> Select a bus route</div>
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="station in stations">
+                <div class="row">
+                    <div class="col col-10">
+                        <i class=" icon ion-android-bus" style="font-size: 24px;  color: #FF8E00;"></i>
+                    </div>
+                    <span class="col col-80" style="font-size: 20px;">
+                        <b>{{station.short_name}}</b> - {{station.long_name}}
+                    </span>
+                    <div class="col col-10">
+                        <i class="icon ion-chevron-right" style="font-size: 24px;  color: #FF8E00;"></i>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-infinite-scroll on-infinite="loadMore()"></ion-infinite-scroll>
+        </ion-list>
+    </ion-content>
+</ion-view>

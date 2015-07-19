@@ -1,0 +1,56 @@
+<ion-view view-title="{{ 'map_page' | translate }}">
+    <ion-content padding="true">
+        <!--
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+            <div map-lazy-load="http://maps.google.com/maps/api/js">
+                <map center="41,-87" zoom="3"></map>
+            </div>
+
+            <div id="map_canvas" data-tap-disabled="true">
+                <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" >
+                    <ui-gmap-markers models="map.markers" coords="'self'"   options="'options'" click="'onMarkerClicked'" >
+                    </ui-gmap-markers>
+                </ui-gmap-google-map>
+            </div>
+        -->
+
+        <!-- ---------Partial Working
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" >
+            <ui-gmap-marker ng-repeat="m in map.markers" coords="m" icon="m.icon" click="onMarkerClicked(m)" idKey="m.id" options="m.options">
+                <ui-gmap-window ng-cloak  coords="map.infoWindowWithCustomClass.coords" isIconVisibleOnClick="false" options="map.infoWindowWithCustomClass.options">
+                    <p>This is an info window at {{ m.latitude | number:4 }}, {{ m.longitude | number:4 }}!</p>
+                    <p class="muted">My marker will stay open when the window is popped up!</p>
+                </ui-gmap-window>
+            </ui-gmap-marker>
+        </ui-gmap-google-map>
+        -->
+
+        <ion-pane class="row">
+            <!-- CHECK IN ICON -->
+            <div class="row row-bottom">
+                <div class="col col-offset-90" style="z-index: 1;" ng-click="checkIn()">
+                    <i class="icon ion-location" style="font-size: 64px;  color: #FF8E00;"></i>
+                </div>
+            </div>
+            <!-- MAP -->
+            <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" >
+                <!-- USER LOCATION -->
+                <ui-gmap-circle center='user.location.center'
+                                radius='user.location.radius'
+                                fill='user.location.fill'
+                                stroke='user.location.stroke'></ui-gmap-circle>
+
+                <ui-gmap-markers models="map.markers" coords="'self'" click="onClicked()" options="'options'">
+                    <ui-gmap-windows  closeClick="'closeClick'" ng-cloak>
+                        <div>
+                            <div ng-controller='MapCtrl'>
+                                <a class="btn" ng-click="clickedButtonInWindow()">CLICK ME </a>
+                                Marker id -> {{marker_id}}
+                            </div>
+                        </div>
+                    </ui-gmap-windows>
+                </ui-gmap-markers>
+            </ui-gmap-google-map>
+        </ion-pane>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view view-title="" class="login-wrapper" cache-view="false">
+    <ion-content>
+        <h1> {{route_id}} - {{route_direction}} </h1>
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" >
+            <ui-gmap-markers models="map.markers" coords="'self'"   options="'options'" click="'onMarkerClicked'" >
+            </ui-gmap-markers>
+            <ui-gmap-polyline ng-repeat="p in map.polylines" path="p.path" stroke="p.stroke" visible='p.visible'
+                              geodesic='p.geodesic' fit="true" editable="p.editable" draggable="p.draggable" icons='p.icons'>
+            </ui-gmap-polyline>
+            </ui-gmap-google-map>
+
+    </ion-content>
+</ion-view>

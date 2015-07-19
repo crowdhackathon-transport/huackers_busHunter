@@ -1,0 +1,28 @@
+<ion-view view-title="{{ 'menu1' | translate }}" name="login-view" class="login-wrapper">
+  	<ion-content class="padding">
+		<div class="row"><div class="col center">
+			<button class="button button-clear" ng-click="ChangeLanguage('en')">EN</button>
+			<button class="button button-clear" ng-click="ChangeLanguage('el')">EL</button>
+		</div></div>
+		<div class="row row-center">	
+			<div class="col col-80 col-offset-10">
+				<form  name="loginForm" ng-submit="login(loginForm)" novalidate>
+					<div class="list login-form">
+					  	<label class="item item-input item-floating-label" ng-class="{'has-errors' : loginForm.email.$invalid && !loginForm.email.$pristine, 'no-errors' : loginForm.email.$valid}">
+				    		<span class="input-label">{{ 'email_placeholder' | translate }}</span>
+					    	<input type="email" name="email" ng-model="credentials.email" placeholder="{{ 'email_placeholder' | translate }}" required>
+					  	</label>
+						<label class="item item-input item-floating-label" ng-class="{'has-errors' : loginForm.password.$invalid && !loginForm.password.$pristine, 'no-errors' : loginForm.password.$valid}">
+							<span class="input-label">{{ 'password_placeholder' | translate }}</span>
+							<input type="password" name="password" ng-model="credentials.password" placeholder="{{ 'password_placeholder' | translate }}" required>
+						</label>
+					</div>
+					<button type="submit" class="button button-block button-positive">{{ 'menu1' | translate }}</button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col center">{{'not_registered' |translate }} <a class="register-link" href="#/register"><strong>{{ 'register' | translate }}!</strong></a></div>
+		</div>
+  	</ion-content>
+</ion-view>

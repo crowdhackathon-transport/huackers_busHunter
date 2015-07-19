@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="lib/angular-dropdowns/dist/angular-dropdowns.css" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/angularjs-toaster/toaster.css">
+    <link rel="stylesheet" href="lib/angular-chart/angular-chart.css">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <!-- translations file -->
+    <script src="js/translations.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places&key=AIzaSyCYStmBKuOyJQIklTuxOcfIPtQIzFeOv64"></script>
+
+
+    <!-- external libraries -->
+    <script src="lib/angular-translate.js"></script>
+    <script src="lib/ng-cordova.min.js"></script>
+    <script src='lib/lodash/lodash.min.js'></script>
+    <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src="lib/angular-dropdowns/dist/angular-dropdowns.min.js"></script>
+    <script src="lib/markerwithlabel.js"></script>
+    <script src="lib/angularjs-toaster/toaster.js"></script>
+    <script src="lib/uuid.js"></script>
+    <script src="lib/angular-chart/Chart.js"></script>
+    <script src="lib/angular-chart/angular-chart.js"></script>
+    <!-- toaster -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.15/toaster.min.js"></script>-->
+
+
+    <!-- our controllers -->
+    <script src="js/controllers/splashController.js"></script>
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/logoutController.js"></script>
+    <script src="js/controllers/registerController.js"></script>
+    <script src="js/controllers/optionsController.js"></script>
+    <script src="js/controllers/mapController.js"></script>
+    <script src="js/controllers/sendLocationController.js"></script>
+    <script src="js/controllers/checkinController.js"></script>
+    <script src="js/controllers/routeController.js"></script>
+    <script src="js/controllers/googleMapsController.js"></script>
+    <script src="js/controllers/googleMapsRouteController.js"></script>
+    <script src="js/controllers/selectLineController.js"></script>
+    <script src="js/controllers/selectLineControllerToCheckIn.js"></script>
+    <script src="js/controllers/checkInLineController.js"></script>
+
+
+    <!-- our services -->
+    <script src="js/services/authenticationService.js"></script>
+    <script src="js/services/webService.js"></script>
+    <script src="js/services/transformPostData.js"></script>
+    <script src="js/services/routeService.js"></script>
+    <script src="js/services/locationService.js"></script>
+    <script src="js/services/stopService.js"></script>
+    <script src="js/services/geofenceService.js"></script>
+    <script src="js/services/cultureData.js"></script>
+
+    <script src="js/directives.js"></script>
+
+  </head>
+
+  <body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

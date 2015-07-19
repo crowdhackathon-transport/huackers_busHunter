@@ -1,0 +1,12 @@
+<ion-view view-title="{{ 'contribute_location' | translate }}">
+    <ion-content padding="true">
+        <h1> {{ 'contribute_location' | translate }} </h1>
+
+        <div dropdown-select="routes"
+             dropdown-model="ddSelectSelected"
+             dropdown-item-label="long_name"
+             dropdown-onchange="select_route(selected)" >
+        </div>
+
+    </ion-content>
+</ion-view>

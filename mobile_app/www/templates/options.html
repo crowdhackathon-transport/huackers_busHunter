@@ -1,0 +1,13 @@
+<ion-view view-title="{{ 'choose_route' | translate }}">
+    <ion-content padding="true">
+        <h1> {{ 'choose_route' | translate }} </h1>
+
+        <div dropdown-select="routes"
+             dropdown-model="ddSelectSelected"
+             dropdown-item-label="direction"
+             dropdown-onchange="select_route(selected)" >
+
+        </div>
+
+    </ion-content>
+</ion-view>
