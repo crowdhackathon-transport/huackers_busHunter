@@ -15,11 +15,11 @@ The server side was developed using [PHP CodeIgniter](https://ellislab.com/codei
 Our Database was MySql and our initial data was based on OpenData provided by [geodata.gov.gr](http://geodata.gov.gr/geodata/index.php?option=com_content&view=article&id=28:2011-09-19-11-17-01&catid=1:2010-06-11-13-02-56&Itemid=15)
 
 ###Team_members(best_of);
-*[Tsadimas Argiris] (https://github.com/tsadimas)
-*[Sardianos Christos] (https://github.com/SrDNS)
-*[Topali Bettina] (bettinatop@gmail.com)
-*[Souliotis Nikos] (souliotis89@gmail.com)
-*[Meletakis Giannis] (https://github.com/meletakis)
+* [Tsadimas Argiris] (https://github.com/tsadimas)
+* [Sardianos Christos] (https://github.com/SrDNS)
+* [Topali Bettina] (bettinatop@gmail.com)
+* [Souliotis Nikos] (souliotis89@gmail.com)
+* [Meletakis Giannis] (https://github.com/meletakis)
 
 
 
