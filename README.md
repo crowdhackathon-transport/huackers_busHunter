@@ -5,7 +5,7 @@ We have included both client & server side projects.
 
 ###Application_Scope();
 Our application provides real time monitoring of public transportation using CrowdSourcing model. The users can be notified (even when at home) when his bus approaches his preffered bus station. Also, while they are on board they can be informed of points of interest in the area nearby. Finally, users speciify their disembark stop in order to get notified when the bus approach this stop. 
-Our [presentation](https://drive.google.com/open?id=1J3KMxOnJoZVxSxqZzOv5ejt-A9l5VcDVZefvChsFyOA) is available only in Green right now and our [awesome logo](https://drive.google.com/open?id=0BwduKTQoife_RDlEckkxTmFHRXM ).
+Our [presentation](https://drive.google.com/open?id=1J3KMxOnJoZVxSxqZzOv5ejt-A9l5VcDVZefvChsFyOA) is available only in Greek right now and our [awesome logo](https://drive.google.com/open?id=0BwduKTQoife_RDlEckkxTmFHRXM ).
 
 ###ClientSide();
 The client side was developer based on [Ionic Framework](http://ionicframework.com/)  and [Apache Cordova](https://cordova.apache.org/) in order to implement a cross-platfrom Application.
